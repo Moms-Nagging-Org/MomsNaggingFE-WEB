@@ -1,2 +1,2 @@
-# MomsNaggingWeb
-[엄마의 잔소리] Web
+# MomsNaggingWEB
+[엄마의 잔소리] WEB
