@@ -1,8 +1,9 @@
-export { default as DashBoard } from './DashBoard';
-export { default as Habit } from './Habit';
-export { default as Push } from './Push';
-export { default as Question } from './Question';
-export { default as User } from './User';
-export { default as Withdrawal } from './Withdrawal';
-export { default as Logo } from './Logo';
-export { default as SideBarLogo } from './SideBarLogo';
+export { default as DashBoardSVG } from './DashBoardSVG';
+export { default as HabitSVG } from './HabitSVG';
+export { default as PushSVG } from './PushSVG';
+export { default as QuestionSVG } from './QuestionSVG';
+export { default as UserSVG } from './UserSVG';
+export { default as WithdrawalSVG } from './WithdrawalSVG';
+export { default as LogoSVG } from './LogoSVG';
+export { default as SideBarLogoSVG } from './SideBarLogoSVG';
+export { default as LogoutSVG } from './LogoutSVG';

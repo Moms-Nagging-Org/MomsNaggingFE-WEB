@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import * as Styled from './styled';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../../assets/Logo';
+import Logo from '../../assets/LogoSVG';
 import { Positioner } from '../../components/Wrapper/styled';
 
 const Login = () => {
