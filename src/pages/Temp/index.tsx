@@ -3,7 +3,7 @@ import * as Styled from './styled';
 import { Positioner } from '../../components/Wrapper/styled';
 import Logo from '../../assets/Logo';
 
-const Setting = () => {
+const Temp = () => {
   return (
     <Positioner>
       <Styled.GlobalStyle />
@@ -16,4 +16,4 @@ const Setting = () => {
   );
 };
 
-export default Setting;
+export default Temp;

@@ -24,7 +24,7 @@ const Login = () => {
         <Styled.Input onChange={onChangeID} id="top" type="text" placeholder="아이디" />
         <Styled.Input onChange={onChangePW} type="password" placeholder="비밀번호" />
         <Styled.Button
-          onClick={() => navigate('/setting')}
+          onClick={() => navigate('/temp')}
           background="#f28590"
           disabled={!(id === 'moms' && pw === 'nagging')}
         >
