@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
 
 export const Temp = styled.div`
   font-family: 'Pretendard-Medium';
-  font-size: 2rem;
   margin: 1.5rem 0;
   color: white;
   opacity: 0.7;
