@@ -9,6 +9,9 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
   }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
 `;
 
 const App = () => {
