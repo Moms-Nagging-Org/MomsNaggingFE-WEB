@@ -1,18 +1,20 @@
 import * as Styled from './styled';
 import DashBox from '../../components/DashBox';
 
-const DashBoard = () => {
+interface Props {
+  optionTitle: string;
+}
+
+const DashBoard = ({ optionTitle }: Props) => {
   return (
     <Styled.Wrapper>
-      <div>
-        <div>1.서비스</div>
-        <Styled.Wrapper>
-          <DashBox />
-          <DashBox />
-          <DashBox />
-          <DashBox />
-        </Styled.Wrapper>
-      </div>
+      <Styled.Title>{optionTitle}</Styled.Title>
+      <Styled.Wrapper id="top">
+        <DashBox />
+        <DashBox />
+        <DashBox />
+        <DashBox />
+      </Styled.Wrapper>
     </Styled.Wrapper>
   );
 };
