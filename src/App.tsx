@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Login, Temp, Setting } from './pages';
+import { Login, Setting } from './pages';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
@@ -21,7 +21,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/setting" element={<Setting />} />
-        <Route path="/temp" element={<Temp />} />
       </Routes>
     </BrowserRouter>
   );
