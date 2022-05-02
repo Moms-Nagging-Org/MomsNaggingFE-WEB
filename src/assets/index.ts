@@ -10,3 +10,4 @@ export { default as LogoutSVG } from './LogoutSVG';
 export { default as ExcelSVG } from './ExcelSVG';
 export { default as DeleteSVG } from './DeleteSVG';
 export { default as SearchSVG } from './SearchSVG';
+export { default as AddSVG } from './AddSVG';
