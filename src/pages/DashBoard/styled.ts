@@ -14,6 +14,6 @@ export const Title = styled.div`
   color: #f43e51;
   font-weight: bold;
   font-size: 1.2rem;
-  margin: 0 4rem;
+  margin-right: 4rem;
   width: 100%;
 `;

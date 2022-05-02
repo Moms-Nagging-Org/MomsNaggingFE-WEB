@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 
 export const SelectTitle = styled.div`
   display: flex;
-  margin: 4rem;
+  margin-bottom: 4rem;
   flex-direction: column;
   font-size: 1.5rem;
   font-weight: bold;

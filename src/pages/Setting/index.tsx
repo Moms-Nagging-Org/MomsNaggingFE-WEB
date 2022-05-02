@@ -4,7 +4,7 @@ import * as Styled from './styled';
 import { useRecoilState } from 'recoil';
 import { selectTitleState } from '../../recoil/recoil';
 
-import Temp from '../Temp';
+import Temp from '../../components/Temp';
 
 const Setting = () => {
   const [selectTitle, setSelectTitle] = useRecoilState(selectTitleState);
@@ -19,7 +19,7 @@ const Setting = () => {
   return (
     <Styled.Wrapper>
       <SideBar selectTitle={selectTitle} setSelectTitle={setSelectTitle} />
-      <div>
+      <div style={{ margin: '4rem' }}>
         <Styled.SelectTitle>{selectTitle}</Styled.SelectTitle>
         {selectMenu[selectTitle]}
       </div>
