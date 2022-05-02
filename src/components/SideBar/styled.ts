@@ -28,7 +28,7 @@ export const SideDetail = styled.div<{ checking?: string }>`
 
   &#logout {
     width: 70%;
-    padding-bottom: 5vh;
+    margin-bottom: 5vh;
   }
 
   &#${({ checking }) => checking} {
