@@ -13,7 +13,7 @@ const DashBox = ({ index }: Props) => {
   ];
   return (
     <>
-      {optionData[index].map((v, i) => (
+      {optionData[index].map(v => (
         <Styled.Wrapper key={v.toString()}>
           <Styled.Title>{v}</Styled.Title>
           <Styled.Content>null</Styled.Content>
