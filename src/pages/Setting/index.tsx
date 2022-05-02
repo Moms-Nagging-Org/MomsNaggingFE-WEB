@@ -1,17 +1,27 @@
 import SideBar from '../../components/SideBar';
 import DashBoard from '../DashBoard';
 import * as Styled from './styled';
+import { useRecoilState } from 'recoil';
+import { selectTitleState } from '../../recoil/recoil';
+
+import Temp from '../Temp';
 
 const Setting = () => {
-  const dashMenu = ['서비스', 'IOS', 'AOS', '상장'];
+  const [selectTitle, setSelectTitle] = useRecoilState(selectTitleState);
+  const selectMenu: any = {
+    대시보드: <DashBoard />,
+    회원관리: <Temp />,
+    PUSH알림: <Temp />,
+    추천습관: <Temp />,
+    문의사항: <Temp />,
+    탈퇴관리: <Temp />,
+  };
   return (
     <Styled.Wrapper>
-      <SideBar />
+      <SideBar selectTitle={selectTitle} setSelectTitle={setSelectTitle} />
       <div>
-        <Styled.SelectTitle>대시보드</Styled.SelectTitle>
-        {dashMenu.map((v, i) => (
-          <DashBoard index={i} key={v.toString()} optionTitle={v} />
-        ))}
+        <Styled.SelectTitle>{selectTitle}</Styled.SelectTitle>
+        {selectMenu[selectTitle]}
       </div>
     </Styled.Wrapper>
   );

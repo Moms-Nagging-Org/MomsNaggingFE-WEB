@@ -1,8 +1,8 @@
 import { atom } from 'recoil';
 
-// const userNameState = atom<string>({
-//   key: 'userNameState',
-//   default: '',
-// });
+const selectTitleState = atom<string>({
+  key: 'selectTitleState',
+  default: '대시보드',
+});
 
-// export { userNameState };
+export { selectTitleState };

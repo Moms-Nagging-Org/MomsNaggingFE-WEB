@@ -12,9 +12,14 @@ import {
   LogoutSVG,
 } from '../../assets';
 
-const SideBar = () => {
+interface Props {
+  selectTitle: string;
+  setSelectTitle: any;
+}
+
+const SideBar = ({ selectTitle, setSelectTitle }: Props) => {
   let navigate = useNavigate();
-  const [checking, setChecking] = useState<string>('대시보드');
+  const [checking, setChecking] = useState<string>(selectTitle);
   const menuList = [
     { name: '대시보드', option: <DashBoardSVG checking={checking === '대시보드'} /> },
     { name: '회원관리', option: <UserSVG checking={checking === '회원관리'} /> },
@@ -26,6 +31,7 @@ const SideBar = () => {
 
   const clickFunc = (e: any) => {
     setChecking(e.target.outerText);
+    setSelectTitle(e.target.outerText);
   };
 
   return (
