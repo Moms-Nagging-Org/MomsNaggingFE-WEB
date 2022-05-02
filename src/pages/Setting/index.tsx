@@ -1,20 +1,25 @@
 import SideBar from '../../components/SideBar';
-import DashBoard from '../DashBoard';
+import {
+  DashBoard,
+  UserManage,
+  PushManage,
+  HabitManage,
+  QuestionManage,
+  WithdrawalManage,
+} from '../';
 import * as Styled from './styled';
 import { useRecoilState } from 'recoil';
 import { selectTitleState } from '../../recoil/recoil';
-
-import Temp from '../../components/Temp';
 
 const Setting = () => {
   const [selectTitle, setSelectTitle] = useRecoilState(selectTitleState);
   const selectMenu: any = {
     대시보드: <DashBoard />,
-    회원관리: <Temp />,
-    PUSH알림: <Temp />,
-    추천습관: <Temp />,
-    문의사항: <Temp />,
-    탈퇴관리: <Temp />,
+    회원관리: <UserManage />,
+    PUSH알림: <PushManage />,
+    추천습관: <HabitManage />,
+    문의사항: <QuestionManage />,
+    탈퇴관리: <WithdrawalManage />,
   };
   return (
     <Styled.Wrapper>

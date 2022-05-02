@@ -2,7 +2,7 @@ import * as Styled from './styled';
 import LogoSVG from '../../assets/LogoSVG';
 import ManageUtil from '../../components/ManageUtil';
 
-const Temp = () => {
+const QuestionManage = () => {
   return (
     <Styled.Wrapper>
       <ManageUtil />
@@ -14,4 +14,4 @@ const Temp = () => {
   );
 };
 
-export default Temp;
+export default QuestionManage;
