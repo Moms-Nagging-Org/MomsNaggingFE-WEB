@@ -7,3 +7,6 @@ export { default as WithdrawalSVG } from './WithdrawalSVG';
 export { default as LogoSVG } from './LogoSVG';
 export { default as SideBarLogoSVG } from './SideBarLogoSVG';
 export { default as LogoutSVG } from './LogoutSVG';
+export { default as ExcelSVG } from './ExcelSVG';
+export { default as DeleteSVG } from './DeleteSVG';
+export { default as SearchSVG } from './SearchSVG';
