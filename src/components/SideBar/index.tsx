@@ -16,12 +16,12 @@ const SideBar = () => {
   let navigate = useNavigate();
   const [checking, setChecking] = useState<string>('대시보드');
   const menuList = [
-    { name: '대시보드', option: <DashBoardSVG /> },
-    { name: '회원관리', option: <UserSVG /> },
-    { name: 'PUSH알림', option: <PushSVG /> },
-    { name: '추천습관', option: <HabitSVG /> },
-    { name: '문의사항', option: <QuestionSVG /> },
-    { name: '탈퇴관리', option: <WithdrawalSVG /> },
+    { name: '대시보드', option: <DashBoardSVG checking={checking === '대시보드'} /> },
+    { name: '회원관리', option: <UserSVG checking={checking === '회원관리'} /> },
+    { name: 'PUSH알림', option: <PushSVG checking={checking === 'PUSH알림'} /> },
+    { name: '추천습관', option: <HabitSVG checking={checking === '추천습관'} /> },
+    { name: '문의사항', option: <QuestionSVG checking={checking === '문의사항'} /> },
+    { name: '탈퇴관리', option: <WithdrawalSVG checking={checking === '탈퇴관리'} /> },
   ];
 
   const clickFunc = (e: any) => {
