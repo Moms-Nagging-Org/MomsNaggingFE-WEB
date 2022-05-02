@@ -31,6 +31,10 @@ export const SideDetail = styled.div<{ checking?: string }>`
     margin-bottom: 5vh;
   }
 
+  &#logout:hover {
+    text-decoration: underline;
+  }
+
   &#${({ checking }) => checking} {
     font-weight: bold;
     background-color: white;
