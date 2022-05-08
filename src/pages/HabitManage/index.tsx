@@ -1,11 +1,11 @@
 import * as Styled from './styled';
 import LogoSVG from '../../assets/LogoSVG';
-import ManageUtil from '../../components/ManageUtil';
+import TabBar from '../../components/TabBar';
 
 const HabitManage = () => {
   return (
     <Styled.Wrapper>
-      <ManageUtil />
+      <TabBar />
       <div>
         <LogoSVG />
         <Styled.Temp>현재 퉁이리가 열심히 개발 중이에요!</Styled.Temp>
