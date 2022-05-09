@@ -25,3 +25,45 @@ export const SelectTitle = styled.div`
   font-weight: bold;
   color: #f43e51;
 `;
+
+export const Table = styled.table`
+  width: 100%;
+  text-align: center;
+  font-size: 0.6rem;
+  margin-top: 1rem;
+`;
+
+export const THead = styled.thead`
+  background-color: #f6f6f6;
+`;
+
+export const THeadRow = styled.tr``;
+
+export const TBody = styled.tbody`
+  font-family: 'Pretendard-SemiBold';
+`;
+
+export const Sequence = styled.td`
+  width: 5%;
+  padding: 1rem 0;
+`;
+
+export const QuestionDate = styled.td`
+  width: 15%;
+  padding: 1rem 0;
+`;
+
+export const ID = styled.td`
+  width: 10%;
+  padding: 1rem 0;
+`;
+
+export const QuestionTitle = styled.td`
+  width: 10%;
+  padding: 1rem 0;
+`;
+
+export const QuestionContent = styled.td`
+  width: 30%;
+  padding: 1rem 0;
+`;
