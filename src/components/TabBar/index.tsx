@@ -27,16 +27,36 @@ const TabBar = () => {
   const clickFunc = (e: any, index: number) => {
     setMenuCheck(index);
     setCheck(e.target.id);
-    console.log(check);
+    // console.log(check);
+    /**
+     * - 위 console.log에서 확인하는 check state값은
+     *   useState로 값을 변경한다고 바로 값이 업데이트 되지 않습니다.
+     *
+     * # 이유
+     *   * useState로 값이 update되는 방식은 '비동기'방식 입니다.
+     *   * usestate update async로 검색해서 내용을 찾아보면 좋을 것 같습니다.
+     *   * 나아가 js에서 비동기 동작 원리를 찾아서 알아 놓는것도 좋을 것 같습니다.
+     *    * keyword는 eventLoop 입니다.
+     *
+     * # 비동기로 업데이트 된 state를 확인하는 방법은?
+     *   * useEffect에 dependency list에 update된 state를 참고1과 같이 넣어서 확인할 수 있습니다.
+     *   * 업데이트 된 state를 처리해주고 싶으면 위에 작성한 방법 처럼 dependency list를 설정한 useEffect에서 처리해주시면 됩니다.
+     */
   };
 
+  // 참고1
   useEffect(() => {
+    console.log({ menuCheck, check });
+  }, [menuCheck, check]);
+
+  useEffect(() => {
+    console.log({ selectTitle });
     if (selectTitle === 'PUSH알림') {
       setMenuChoice({ ...menuChoice, number: 0, option: 'many' });
-      console.log(check);
+      // console.log(check);
     } else if (selectTitle === '추천습관') {
       setMenuChoice({ ...menuChoice, number: 1, option: 'life' });
-      console.log(check);
+      // console.log(check);
     }
   }, [selectTitle]);
 

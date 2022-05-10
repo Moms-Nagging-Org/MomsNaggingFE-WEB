@@ -13,6 +13,8 @@ import { selectTitleState } from '../../recoil/recoil';
 
 const Setting = () => {
   const [selectTitle, setSelectTitle] = useRecoilState(selectTitleState);
+
+  // key 값은 영어로 하면 좋을 것 같습니다.
   const selectMenu: any = {
     대시보드: <DashBoard />,
     회원관리: <UserManage />,
