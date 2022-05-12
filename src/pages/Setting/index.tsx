@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import SideBar from '../../components/SideBar';
 import {
   DashBoard,
@@ -23,6 +24,17 @@ const Setting = () => {
     문의사항: <QuestionManage />,
     탈퇴관리: <WithdrawalManage />,
   };
+
+  useEffect(() => {
+    fetch('https://api.momsnagging.ml/api/v1/Schedules')
+      .then(async response => {
+        if (response.ok) {
+          const result = await response.json();
+          console.log(result);
+        }
+      })
+      .catch(console.error);
+  }, []);
   return (
     <Styled.Wrapper>
       <SideBar selectTitle={selectTitle} setSelectTitle={setSelectTitle} />
