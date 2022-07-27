@@ -1,13 +1,15 @@
 {
-  "name": "momsnaggingfe-web",
+  "name": "momsnagging",
   "private": true,
-  "version": "0.0.0",
+  "proxy": "https://api.momsnagging.ml",
+  "version": "0.1.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8081",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "msw": "^0.39.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
