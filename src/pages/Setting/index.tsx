@@ -25,16 +25,6 @@ const Setting = () => {
     탈퇴관리: <WithdrawalManage />,
   };
 
-  useEffect(() => {
-    fetch('https://api.momsnagging.ml/api/v1/Schedules')
-      .then(async response => {
-        if (response.ok) {
-          const result = await response.json();
-          console.log(result);
-        }
-      })
-      .catch(console.error);
-  }, []);
   return (
     <Styled.Wrapper>
       <SideBar selectTitle={selectTitle} setSelectTitle={setSelectTitle} />

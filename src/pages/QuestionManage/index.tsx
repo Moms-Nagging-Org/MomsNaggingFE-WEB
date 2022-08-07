@@ -1,7 +1,22 @@
 import * as Styled from './styled';
 import ManageUtil from '../../components/ManageUtil';
+import useFetch from '@/hooks/useFetch';
+
+interface IQuestions {
+  id: number;
+  title: string;
+  context: string;
+  userId: number;
+  createdAt: string;
+}
+[];
 
 const QuestionManage = () => {
+  const { data: questions, error } = useFetch<IQuestions>('/questions', 'GET');
+
+  console.log(questions);
+  console.log(error);
+
   return (
     <Styled.Wrapper>
       <ManageUtil />

@@ -1,11 +1,7 @@
 import * as Styled from './styled';
-import ManageUtil from '../../components/ManageUtil';
-import { singOutApi } from '../../api/api';
+import ManageUtil from '@/components/ManageUtil';
 
 const WithdrawalManage = () => {
-  singOutApi()
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
   return (
     <Styled.Wrapper>
       <ManageUtil />
