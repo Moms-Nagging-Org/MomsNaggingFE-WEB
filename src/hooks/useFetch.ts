@@ -13,10 +13,10 @@ function useFetch<T>(url: string, method: string) {
       method,
       url,
     })
-      .then(response => {
+      .then((response) => {
         setData(response.data);
       })
-      .catch(err => {
+      .catch((err) => {
         setError(err);
       })
       .finally(() => setLoading(false));
