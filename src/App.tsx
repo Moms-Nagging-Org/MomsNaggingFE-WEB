@@ -1,7 +1,8 @@
+import 'antd/dist/antd.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Login, Setting } from './pages';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import { Login, Setting } from './pages';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

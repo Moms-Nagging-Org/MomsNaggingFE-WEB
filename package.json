@@ -1,7 +1,6 @@
 {
   "name": "momsnagging",
   "private": true,
-  "proxy": "https://api.momsnagging.ml",
   "version": "0.1.0",
   "scripts": {
     "dev": "vite --port 8081",
