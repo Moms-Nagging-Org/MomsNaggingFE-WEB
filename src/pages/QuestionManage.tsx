@@ -71,29 +71,27 @@ const QuestionManage = () => {
   return (
     <div>
       <ManageUtil />
-      <div>
-        <Table
-          pagination={{
-            current: page,
-            pageSize: 20,
-            total: newQuestions?.total,
-            onChange: (page) => {
-              setPage(page);
-              navigate({
-                search: createSearchParams({
-                  page: page.toString(),
-                }).toString(),
-              });
-            },
-          }}
-          rowKey={(item) => {
-            return item.id;
-          }}
-          columns={columns}
-          dataSource={questions?.result}
-          loading={loading}
-        />
-      </div>
+      <Table
+        pagination={{
+          current: page,
+          pageSize: 20,
+          total: newQuestions?.total,
+          onChange: (page) => {
+            setPage(page);
+            navigate({
+              search: createSearchParams({
+                page: page.toString(),
+              }).toString(),
+            });
+          },
+        }}
+        rowKey={(item) => {
+          return item.id;
+        }}
+        columns={columns}
+        dataSource={questions?.result}
+        loading={loading}
+      />
     </div>
   );
 };
