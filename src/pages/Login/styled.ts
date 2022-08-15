@@ -39,7 +39,7 @@ export const Button = styled.button<{ background: string }>`
   font-size: 1rem;
   font-weight: bold;
   border-radius: 12px;
-  background: ${props => props.background};
+  background: ${(props) => props.background};
   font-family: 'Pretendard-Regular';
   cursor: pointer;
   user-select: none;

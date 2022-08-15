@@ -1,3 +1,4 @@
+import CustomLayout from '@/components/Layout';
 import ManageUtil from '@/components/ManageUtil';
 
 import useFetch from '@/hooks/useFetch';
@@ -69,7 +70,7 @@ const SignOutManage = () => {
   }, [questions]);
 
   return (
-    <div>
+    <CustomLayout data={questions} title="탈퇴관리">
       <ManageUtil />
       <Table
         pagination={{
@@ -92,7 +93,7 @@ const SignOutManage = () => {
         dataSource={questions?.result}
         loading={loading}
       />
-    </div>
+    </CustomLayout>
   );
 };
 

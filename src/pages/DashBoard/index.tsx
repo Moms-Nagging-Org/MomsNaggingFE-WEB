@@ -1,10 +1,11 @@
-import * as Styled from './styled';
+import CustomLayout from '@/components/Layout';
 import DashBox from '../../components/DashBox';
+import * as Styled from './styled';
 
 const DashBoard = () => {
   const dashMenu = ['서비스', 'IOS', 'AOS', '상장'];
   return (
-    <>
+    <CustomLayout data={'1'} title="대시보드">
       {dashMenu.map((v, i) => (
         <Styled.Wrapper key={v.toString()}>
           <Styled.Title>
@@ -15,7 +16,7 @@ const DashBoard = () => {
           </Styled.Wrapper>
         </Styled.Wrapper>
       ))}
-    </>
+    </CustomLayout>
   );
 };
 

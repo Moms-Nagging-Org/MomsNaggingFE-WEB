@@ -47,7 +47,7 @@ const columns: ColumnsType<Questions> = [
   },
 ];
 
-const QuestionManage = () => {
+const UserManage = () => {
   const {
     data: questions,
     loading,
@@ -70,7 +70,7 @@ const QuestionManage = () => {
   }, [questions]);
 
   return (
-    <CustomLayout data={questions} title="문의사항">
+    <CustomLayout data={questions} title="회원관리">
       <ManageUtil />
       <Table
         pagination={{
@@ -97,4 +97,4 @@ const QuestionManage = () => {
   );
 };
 
-export default QuestionManage;
+export default UserManage;

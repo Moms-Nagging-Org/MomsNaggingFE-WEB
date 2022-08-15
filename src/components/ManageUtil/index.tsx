@@ -1,5 +1,7 @@
 import * as Styled from './styled';
-import { ExcelSVG, DeleteSVG, SearchSVG } from '../../assets';
+import ExcelSVG from '@/assets/ExcelSVG';
+import SearchSVG from '@/assets/SearchSVG';
+import DeleteSVG from '@/assets/DeleteSVG';
 
 const ManageUtil = () => {
   return (

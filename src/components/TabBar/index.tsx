@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import * as Styled from './styled';
-import { AddSVG } from '../../assets';
+import AddSVG from '@/assets/AddSVG';
+import { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { selectTitleState } from '../../recoil/recoil';
+import * as Styled from './styled';
 
 const menu = [
   [
@@ -68,7 +68,7 @@ const TabBar = () => {
             key={v.name}
             id={v.option}
             check={check}
-            onClick={e => clickFunc(e, index)}
+            onClick={(e) => clickFunc(e, index)}
           >
             {v.name}
           </Styled.MenuTitle>
