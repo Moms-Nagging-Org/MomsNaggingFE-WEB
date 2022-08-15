@@ -70,7 +70,7 @@ const QuestionManage = () => {
   }, [questions]);
 
   return (
-    <CustomLayout data={questions} title="문의사항">
+    <CustomLayout data={questions} open="/question" title="문의사항">
       <ManageUtil />
       <Table
         pagination={{
@@ -90,7 +90,7 @@ const QuestionManage = () => {
           return item.id;
         }}
         columns={columns}
-        dataSource={questions?.result}
+        dataSource={questions}
         loading={loading}
       />
     </CustomLayout>

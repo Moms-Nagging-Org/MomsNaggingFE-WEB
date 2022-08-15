@@ -70,7 +70,7 @@ const UserManage = () => {
   }, [questions]);
 
   return (
-    <CustomLayout data={questions} title="회원관리">
+    <CustomLayout data={questions} open="/user" title="회원관리">
       <ManageUtil />
       <Table
         pagination={{

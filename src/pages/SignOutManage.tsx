@@ -70,13 +70,13 @@ const SignOutManage = () => {
   }, [questions]);
 
   return (
-    <CustomLayout data={questions} title="탈퇴관리">
+    <CustomLayout data={questions} open="/sign-out" title="탈퇴관리">
       <ManageUtil />
       <Table
         pagination={{
           current: page,
-          pageSize: 20,
-          total: newQuestions?.total,
+          pageSize: 10,
+          total: 20,
           onChange: (page) => {
             setPage(page);
             navigate({
@@ -90,7 +90,7 @@ const SignOutManage = () => {
           return item.id;
         }}
         columns={columns}
-        dataSource={questions?.result}
+        dataSource={questions}
         loading={loading}
       />
     </CustomLayout>
