@@ -1,8 +1,12 @@
-import * as Styled from './styled';
+import DeleteSVG from '@/assets/DeleteSVG';
 import ExcelSVG from '@/assets/ExcelSVG';
 import SearchSVG from '@/assets/SearchSVG';
-import DeleteSVG from '@/assets/DeleteSVG';
+import * as Styled from './styled';
+import { Input } from 'antd';
 
+const { Search } = Input;
+
+const onSearch = (value: string) => console.log(value);
 const ManageUtil = () => {
   return (
     <Styled.Wrapper id="top">
@@ -17,10 +21,13 @@ const ManageUtil = () => {
         </Styled.Wrapper>
       </Styled.Wrapper>
       <Styled.Wrapper>
-        <Styled.Input placeholder="검색어를 입력해주세요" />
-        <div onClick={() => alert('개발중입니다!')}>
-          <SearchSVG />
-        </div>
+        <Search
+          placeholder="검색어를 입력해주세요"
+          allowClear
+          enterButton={<SearchSVG />}
+          size="large"
+          onSearch={onSearch}
+        />
       </Styled.Wrapper>
     </Styled.Wrapper>
   );

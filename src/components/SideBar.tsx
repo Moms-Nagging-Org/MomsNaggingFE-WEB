@@ -474,7 +474,7 @@ const SideBar = ({ open = '/dashboard' }: Props) => {
           </defs>
         </svg>
       </Logo>
-      <StyledMenu
+      <Menu
         onClick={(e) => navigate(e.key)}
         defaultSelectedKeys={[open]}
         defaultOpenKeys={[open]}
@@ -495,18 +495,4 @@ const Logo = styled.div`
   color: white;
   font-weight: bold;
   cursor: pointer;
-`;
-
-const StyledMenu = styled(Menu)`
-  .ant-menu-item-selected {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-  }
-
-  .ant-menu-inline .ant-menu-item::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-  }
 `;

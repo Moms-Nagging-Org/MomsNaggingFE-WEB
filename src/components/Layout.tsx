@@ -10,35 +10,26 @@ interface Props {
   data?: any;
 }
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 const CustomLayout = ({ children, data, open, title }: Props) => {
   return (
-    <StyledLayout data={data}>
+    <Layout>
       <SideBar open={open} />
-      <StyledLayout data={data}>
-        <StyledHeader>
+      <Layout>
+        <Header>
           <Title>{title}</Title>
-        </StyledHeader>
+        </Header>
         <Content>{children}</Content>
-        <Footer>@개발자 퉁이리</Footer>
-      </StyledLayout>
-    </StyledLayout>
+      </Layout>
+    </Layout>
   );
 };
 
 export default CustomLayout;
-
-const StyledLayout = styled(Layout)<{
-  data: null | '';
-}>`
-  height: ${(props) => props.data && '100vh'};
-`;
 
 const Title = styled.div`
   font-weight: 700;
   font-size: 1.5rem;
   color: #f43e51;
 `;
-
-const StyledHeader = styled(Header)``;
