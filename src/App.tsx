@@ -10,6 +10,8 @@ import {
   UserManage,
 } from './pages';
 
+import PushManage from './pages/PushManage';
+
 const GlobalStyle = createGlobalStyle`
   ${reset}
   * {
@@ -102,7 +104,7 @@ const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/habit" element={<DashBoard />} />
-        <Route path="/push" element={<DashBoard />} />
+        <Route path="/push" element={<PushManage />} />
         <Route path="/user" element={<UserManage />} />
         <Route path="/question" element={<QuestionManage />} />
         <Route path="/sign-out" element={<SignOutManage />} />
