@@ -1,3 +1,4 @@
+import { pushData } from '@/api/api';
 import CustomLayout from '@/components/Layout';
 import ManageUtil from '@/components/ManageUtil';
 
@@ -81,6 +82,8 @@ const PushManage = () => {
   }, [questions]);
 
   console.log(questions);
+
+  pushData();
 
   return (
     <CustomLayout data={questions} open="/push" title="PUSH알림">
