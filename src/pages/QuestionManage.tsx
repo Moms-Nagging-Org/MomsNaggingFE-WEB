@@ -2,7 +2,7 @@ import ManageUtil from '@/components/ManageUtil';
 import useFetch from '@/hooks/useFetch';
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   createSearchParams,
   useNavigate,
@@ -11,8 +11,11 @@ import {
 import CustomLayout from '../components/Layout';
 
 interface QuestionsResponse {
-  result: Questions[];
-  total: number;
+  content: Questions[];
+  totalPages: number;
+  totalElements: number;
+  size: number;
+  empty: boolean;
 }
 
 interface Questions {
@@ -57,17 +60,6 @@ const QuestionManage = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
-  let newQuestions = {
-    result: questions ?? undefined,
-    total: 4,
-  };
-
-  useEffect(() => {
-    newQuestions = {
-      result: questions ?? undefined,
-      total: 4,
-    };
-  }, [questions]);
 
   return (
     <CustomLayout data={questions} open="/question" title="문의사항">
@@ -75,8 +67,8 @@ const QuestionManage = () => {
       <Table
         pagination={{
           current: page,
-          pageSize: 20,
-          total: newQuestions?.total,
+          pageSize: questions?.totalElements,
+          total: questions?.totalPages,
           onChange: (page) => {
             setPage(page);
             navigate({
@@ -90,7 +82,7 @@ const QuestionManage = () => {
           return item.id;
         }}
         columns={columns}
-        dataSource={questions}
+        dataSource={questions?.content}
         loading={loading}
       />
     </CustomLayout>
