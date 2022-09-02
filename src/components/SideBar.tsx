@@ -37,21 +37,21 @@ const items: MenuItem[] = [
       <path
         d="M4.5 21V9L12 3L19.5 9V21H4.5Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9.5 14.5V21H14.5V14.5H9.5Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinejoin="round"
       />
       <path
         d="M4.5 21H19.5"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   ),
@@ -68,37 +68,37 @@ const items: MenuItem[] = [
       <path
         d="M18 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V4C20 2.89543 19.1046 2 18 2Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2 6.74109H6"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2 17.0006H6"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8.61377 16.4515L8.96477 15.1749C10.1262 10.9511 15.1013 10.9511 16.2627 15.1749L16.6137 16.4515"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12.6138 11.9929C13.8411 11.9929 14.836 10.998 14.836 9.77068C14.836 8.54338 13.8411 7.54846 12.6138 7.54846C11.3865 7.54846 10.3916 8.54338 10.3916 9.77068C10.3916 10.998 11.3865 11.9929 12.6138 11.9929Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="bevel"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="bevel"
       />
     </svg>
   ),
@@ -115,30 +115,30 @@ const items: MenuItem[] = [
       <path
         d="M19.13 21.67L15.74 19.07C15.699 19.0367 15.6478 19.0185 15.595 19.0185C15.5422 19.0185 15.491 19.0367 15.45 19.07L12.24 21.82C12.1983 21.8559 12.145 21.8756 12.09 21.8756C12.035 21.8756 11.9817 21.8559 11.94 21.82L8.3 19.07C8.2615 19.0355 8.21166 19.0165 8.16 19.0165C8.10834 19.0165 8.0585 19.0355 8.02 19.07L4.88 21.65C4.84517 21.6751 4.80423 21.6904 4.76145 21.6944C4.71868 21.6983 4.67563 21.6907 4.63681 21.6723C4.59799 21.6539 4.56482 21.6254 4.54076 21.5898C4.51669 21.5542 4.50262 21.5129 4.5 21.47V4.10999C4.5 3.57955 4.71071 3.07084 5.08579 2.69577C5.46086 2.3207 5.96957 2.10999 6.5 2.10999H17.5C18.0304 2.10999 18.5391 2.3207 18.9142 2.69577C19.2893 3.07084 19.5 3.57955 19.5 4.10999V21.49C19.4995 21.5327 19.4872 21.5744 19.4643 21.6105C19.4415 21.6466 19.409 21.6756 19.3706 21.6943C19.3322 21.713 19.2894 21.7206 19.2469 21.7163C19.2044 21.712 19.1639 21.696 19.13 21.67V21.67Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M7.08984 6.21997H15.0898"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M7.08984 10.22H12.0898"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M7.08984 14.22H16.0898"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
@@ -155,44 +155,44 @@ const items: MenuItem[] = [
       <path
         d="M9.5 2H5.5C4.39543 2 3.5 2.89543 3.5 4V8C3.5 9.10457 4.39543 10 5.5 10H9.5C10.6046 10 11.5 9.10457 11.5 8V4C11.5 2.89543 10.6046 2 9.5 2Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9.5 14H5.5C4.39543 14 3.5 14.8954 3.5 16V20C3.5 21.1046 4.39543 22 5.5 22H9.5C10.6046 22 11.5 21.1046 11.5 20V16C11.5 14.8954 10.6046 14 9.5 14Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M20.5 16H14.5"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M18.5 20H14.5"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M18.5 8H14.5"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M20.5 4H14.5"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
@@ -209,44 +209,44 @@ const items: MenuItem[] = [
       <path
         d="M20 2H4C2.89543 2 2 2.89543 2 4V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V4C22 2.89543 21.1046 2 20 2Z"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2 7H22"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2 12H22"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M2 17H22"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M15 2V7"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8 17V22"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
@@ -264,30 +264,30 @@ const items: MenuItem[] = [
         <path
           d="M2.5 21L3.29 18.13C4.6 13.4 8.05 11 11.5 11"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M11.5 10.99C14.2614 10.99 16.5 8.75141 16.5 5.98999C16.5 3.22857 14.2614 0.98999 11.5 0.98999C8.73858 0.98999 6.5 3.22857 6.5 5.98999C6.5 8.75141 8.73858 10.99 11.5 10.99Z"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="bevel"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="bevel"
         />
         <path
           d="M16.5 23.01C19.2614 23.01 21.5 20.7714 21.5 18.01C21.5 15.2486 19.2614 13.01 16.5 13.01C13.7386 13.01 11.5 15.2486 11.5 18.01C11.5 20.7714 13.7386 23.01 16.5 23.01Z"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M14.5 18.01H18.5"
           stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
@@ -356,16 +356,16 @@ const SideBar = ({ open = '/dashboard' }: Props) => {
           <path
             d="M98.059 69.3828L98.7969 72.1616"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
           <path
             d="M94.6115 71.793L97.4248 73.142"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
           <path
             d="M100.45 78.3268C102.215 77.8539 103.204 75.82 102.658 73.7841C102.113 71.7482 100.24 70.4811 98.4742 70.9541C96.7089 71.4271 95.7201 73.461 96.2656 75.4969C96.8111 77.5328 98.6844 78.7998 100.45 78.3268Z"
@@ -374,31 +374,31 @@ const SideBar = ({ open = '/dashboard' }: Props) => {
           <path
             d="M102.245 69.752L100.48 72.3232"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
           <path
             d="M94.0233 67.1242C93.4814 65.0834 94.473 63.054 96.2371 62.5813C98.0012 62.1086 99.8807 63.3769 100.423 65.4062"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M118.986 63.7793L119.724 66.5581"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
           <path
             d="M115.539 66.1895L118.352 67.5385"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
           <path
             d="M121.377 72.7233C123.143 72.2503 124.132 70.2165 123.586 68.1806C123.041 66.1446 121.167 64.8776 119.402 65.3506C117.637 65.8236 116.648 67.8575 117.193 69.8934C117.739 71.9293 119.612 73.1963 121.377 72.7233Z"
@@ -407,17 +407,17 @@ const SideBar = ({ open = '/dashboard' }: Props) => {
           <path
             d="M123.172 64.1367L121.419 66.7195"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
           />
           <path
             d="M114.951 61.5207C114.409 59.4798 115.4 57.4505 117.164 56.9778C118.929 56.505 120.808 57.7734 121.35 59.8027"
             stroke="#5B351F"
-            stroke-width="1.15302"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.15302"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M16.7594 142.162C13.1363 142.148 10.5387 144.459 10.5523 147.795C10.5387 151.158 13.1363 153.414 16.7594 153.4C20.109 153.414 22.5973 151.432 22.9117 148.424H28.2984V154.658H30.0211V140.74H28.2984V146.975H22.8844C22.4879 144.09 20.0406 142.148 16.7594 142.162ZM12.193 147.795C12.2066 145.389 14.107 143.625 16.7594 143.639C19.3434 143.625 21.2711 145.389 21.2711 147.795C21.2711 150.215 19.3434 151.951 16.7594 151.951C14.107 151.951 12.2066 150.215 12.193 147.795ZM14.4078 164.502H30.0211V155.943H14.4078V164.502ZM16.1031 163.08V157.365H28.3258V163.08H16.1031ZM46.0727 143.201H35.1078V158.623H46.0727V143.201ZM36.7758 157.201V144.623H44.3773V157.201H36.7758ZM50.8852 164.857H52.6078V152.033H56.7641V150.557H52.6078V140.74H50.8852V164.857ZM65.843 142.545C62.0559 142.545 59.3898 144.801 59.3898 148.123C59.3898 151.445 62.0559 153.701 65.843 153.701C69.6301 153.701 72.2824 151.445 72.2961 148.123C72.2824 144.801 69.6301 142.545 65.843 142.545ZM58.0773 157.912L58.3508 159.443C62.7395 159.443 68.7414 159.43 74.3195 158.404L74.1828 157.092C68.7824 157.912 62.5891 157.939 58.0773 157.912ZM61.0852 148.123C61.0715 145.758 63.0676 144.076 65.843 144.076C68.6047 144.076 70.6008 145.758 70.6008 148.123C70.6008 150.488 68.6047 152.184 65.843 152.17C63.0676 152.184 61.0715 150.488 61.0852 148.123ZM75.8508 164.885H77.5734V140.74H75.8508V164.885ZM96.8523 145.088V144.979H101.802V142.217H88.3211V144.979H93.325V145.088C93.3113 148.273 91.4383 151.541 87.282 152.881L89.1141 155.67C92.0398 154.672 94.0359 152.676 95.1434 150.188C96.2234 152.389 98.0965 154.139 100.763 155.014L102.677 152.389C98.616 151.09 96.8387 148.082 96.8523 145.088ZM91.2742 164.803H108.309V162.014H94.7469V156.791H91.2742V164.803ZM103.907 158.596H107.407V150.475H110.77V147.604H107.407V140.357H103.907V158.596ZM134.341 159.471H124.552V153.838H121.08V159.471H111.564V162.26H134.341V159.471ZM112.111 151.732L113.588 154.631C117.935 153.852 121.175 151.486 122.802 148.396C124.443 151.5 127.697 153.838 132.072 154.631L133.548 151.732C127.861 150.857 124.648 147.111 124.662 143.557V141.779H120.943V143.557C120.916 147.07 117.744 150.857 112.111 151.732ZM156.327 140.357H152.854V165.295H156.327V140.357ZM136.776 145.252H145.061V149.271H136.803V159.471H139.045C143.584 159.471 147.289 159.32 151.377 158.596L151.077 155.779C147.426 156.381 144.213 156.572 140.412 156.6V152.033H148.616V142.436H136.776V145.252Z"
