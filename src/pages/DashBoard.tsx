@@ -1,18 +1,56 @@
 import CustomLayout from '@/components/Layout';
+import useFetch from '@/hooks/useFetch';
 import styled from 'styled-components';
-import DashBox from '../components/DashBox';
+interface DashBoardResponse {
+  service: Services;
+  grade: Levels;
+}
+
+interface Levels {
+  [level: string]: string;
+}
+
+interface Services {
+  nofQuestions: number;
+  nofUsers: number;
+}
 
 const DashBoard = () => {
-  const dashMenu = ['서비스', 'IOS', 'AOS', '상장'];
+  const dashMenu = ['총 회원 수', '문의사항 개수', '엄친아'];
+
+  const { data: questions, loading } = useFetch<DashBoardResponse>(
+    '/dashboard',
+    'GET'
+  );
+
+  console.log(questions?.grade);
+
   return (
     <CustomLayout data={'1'} title="대시보드">
       {dashMenu.map((v, i) => (
         <Wrapper key={v.toString()}>
           <Title>
-            {i + 1}.{dashMenu[i]}
+            {i + 1}. {dashMenu[i]}
           </Title>
           <Wrapper id={i !== 3 ? 'top' : ''}>
-            <DashBox index={i} />
+            {i === 2 ? (
+              <>
+                {Object.keys(questions?.grade ?? {}).map((value, index) => (
+                  <Card key={value.toString()}>
+                    <LevelTitle>{value}</LevelTitle>
+                    <CardTitle>{questions?.grade[value]}</CardTitle>
+                  </Card>
+                ))}
+              </>
+            ) : (
+              <Card key={v.toString()}>
+                {i === 0 ? (
+                  <CardTitle>{questions?.service.nofUsers} 명</CardTitle>
+                ) : (
+                  <CardTitle>{questions?.service.nofQuestions} 개</CardTitle>
+                )}
+              </Card>
+            )}
           </Wrapper>
         </Wrapper>
       ))}
@@ -22,20 +60,40 @@ const DashBoard = () => {
 
 export default DashBoard;
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
   padding-bottom: 1.5rem;
+  gap: 2rem;
   &#top {
     border-bottom: 1px dashed #bababa;
   }
 `;
 
-export const Title = styled.div`
+const Title = styled.div`
   display: flex;
   color: #f43e51;
   font-weight: bold;
   font-size: 1.2rem;
-  margin-right: 4rem;
-  width: 100%;
+  width: 15%;
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 10vh;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+`;
+
+const CardTitle = styled.div`
+  font-weight: bold;
+`;
+
+const LevelTitle = styled.div`
+  font-size: small;
+  padding-bottom: 5px;
 `;
