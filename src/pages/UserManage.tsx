@@ -2,7 +2,7 @@ import ManageUtil from '@/components/ManageUtil';
 import useFetch from '@/hooks/useFetch';
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/lib/table';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   createSearchParams,
   useNavigate,
@@ -10,64 +10,64 @@ import {
 } from 'react-router-dom';
 import CustomLayout from '../components/Layout';
 
-interface QuestionsResponse {
-  result: Questions[];
-  total: number;
+interface UsersResponse {
+  content: Users[];
+  totalPages: number;
+  totalElements: number;
+  size: number;
+  empty: boolean;
 }
 
-interface Questions {
-  id: number;
-  title: string;
-  context: string;
-  userId: number;
+interface Users {
   createdAt: string;
+  device: string;
+  id: number;
+  naggingLevel: number;
+  nickName: string;
+  personalId: string;
+  provider: string;
 }
 
-const columns: ColumnsType<Questions> = [
+const columns: ColumnsType<Users> = [
   {
-    title: '문의 일자',
+    title: '가입 일자',
     dataIndex: 'createdAt',
     key: 'createdAt',
     render: (value) => <div>{value.slice(0, 10)}</div>,
   },
   {
+    title: '기기',
+    dataIndex: 'device',
+    key: 'device',
+  },
+  {
+    title: '로그인',
+    dataIndex: 'provider',
+    key: 'provider',
+  },
+  {
     title: '아이디',
-    dataIndex: 'userId',
-    key: 'userId',
+    key: 'personalId',
+    dataIndex: 'personalId',
   },
   {
-    title: '문의 제목',
-    dataIndex: 'title',
-    key: 'title',
+    title: '호칭',
+    key: 'nickName',
+    dataIndex: 'nickName',
   },
   {
-    title: '문의 내용',
-    key: 'context',
-    dataIndex: 'context',
+    title: '잔소리 강도',
+    key: 'naggingLevel',
+    dataIndex: 'naggingLevel',
   },
 ];
 
 const UserManage = () => {
-  const {
-    data: questions,
-    loading,
-    error,
-  } = useFetch<QuestionsResponse>('/questions', 'GET');
+  const { data: questions, loading } = useFetch<UsersResponse>('/users', 'GET');
 
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
-  let newQuestions = {
-    result: questions ?? undefined,
-    total: 4,
-  };
-
-  useEffect(() => {
-    newQuestions = {
-      result: questions ?? undefined,
-      total: 4,
-    };
-  }, [questions]);
 
   return (
     <CustomLayout data={questions} open="/user" title="회원관리">
@@ -75,8 +75,8 @@ const UserManage = () => {
       <Table
         pagination={{
           current: page,
-          pageSize: 20,
-          total: newQuestions?.total,
+          pageSize: questions?.totalPages,
+          total: questions?.totalElements,
           onChange: (page) => {
             setPage(page);
             navigate({
@@ -90,7 +90,7 @@ const UserManage = () => {
           return item.id;
         }}
         columns={columns}
-        dataSource={questions?.result}
+        dataSource={questions?.content}
         loading={loading}
       />
     </CustomLayout>
