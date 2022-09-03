@@ -5,8 +5,17 @@ import styled from 'styled-components';
 
 const dashMenu = ['총 회원 수', '문의사항 개수', '엄친아'];
 
+const loadingLv = {
+  nofLv1: 0,
+  nofLv2: 0,
+  nofLv3: 0,
+  nofLv4: 0,
+};
+
 const DashBoard = () => {
   const { data: dashData } = useFetch<DashBoardResponse>('/dashboard', 'GET');
+
+  console.log(dashData?.grade);
 
   return (
     <CustomLayout data={'1'} title="대시보드">
@@ -18,19 +27,23 @@ const DashBoard = () => {
           <Wrapper id={i !== 3 ? 'top' : ''}>
             {i === 2 ? (
               <>
-                {Object.keys(dashData?.grade ?? {}).map((value, index) => (
-                  <Card key={value.toString()}>
-                    <LevelTitle>{value}</LevelTitle>
-                    <CardTitle>{dashData?.grade[value]}</CardTitle>
-                  </Card>
-                ))}
+                {Object.keys(dashData?.grade ?? loadingLv).map(
+                  (value, index) => (
+                    <Card key={value.toString()}>
+                      <LevelTitle>{value}</LevelTitle>
+                      <CardTitle>{dashData?.grade[value] ?? 0}</CardTitle>
+                    </Card>
+                  )
+                )}
               </>
             ) : (
               <Card key={v.toString()}>
                 {i === 0 ? (
-                  <CardTitle>{dashData?.service.nofUsers} 명</CardTitle>
+                  <CardTitle>{dashData?.service.nofUsers ?? 0} 명</CardTitle>
                 ) : (
-                  <CardTitle>{dashData?.service.nofQuestions} 개</CardTitle>
+                  <CardTitle>
+                    {dashData?.service.nofQuestions ?? 0} 개
+                  </CardTitle>
                 )}
               </Card>
             )}
