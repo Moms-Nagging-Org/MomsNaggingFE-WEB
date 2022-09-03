@@ -1,23 +1,11 @@
 import CustomLayout from '@/components/Layout';
 import useFetch from '@/hooks/useFetch';
+import { DashBoardResponse } from '@/interface';
 import styled from 'styled-components';
-interface DashBoardResponse {
-  service: Services;
-  grade: Levels;
-}
 
-interface Levels {
-  [level: string]: string;
-}
-
-interface Services {
-  nofQuestions: number;
-  nofUsers: number;
-}
+const dashMenu = ['총 회원 수', '문의사항 개수', '엄친아'];
 
 const DashBoard = () => {
-  const dashMenu = ['총 회원 수', '문의사항 개수', '엄친아'];
-
   const { data: dashData } = useFetch<DashBoardResponse>('/dashboard', 'GET');
 
   return (

@@ -1,61 +1,20 @@
+import CustomLayout from '@/components/Layout';
 import ManageUtil from '@/components/ManageUtil';
 import useFetch from '@/hooks/useFetch';
+import { questionsColumns, QuestionsResponse } from '@/interface';
 import { Table } from 'antd';
-import { ColumnsType } from 'antd/lib/table';
 import { useState } from 'react';
 import {
   createSearchParams,
   useNavigate,
   useSearchParams,
 } from 'react-router-dom';
-import CustomLayout from '../components/Layout';
-
-interface QuestionsResponse {
-  content: Questions[];
-  totalPages: number;
-  totalElements: number;
-  size: number;
-  empty: boolean;
-}
-
-interface Questions {
-  id: number;
-  title: string;
-  context: string;
-  userId: number;
-  createdAt: string;
-}
-
-const columns: ColumnsType<Questions> = [
-  {
-    title: '문의 일자',
-    dataIndex: 'createdAt',
-    key: 'createdAt',
-    render: (value) => <div>{value.slice(0, 10)}</div>,
-  },
-  {
-    title: '아이디',
-    dataIndex: 'userId',
-    key: 'userId',
-  },
-  {
-    title: '문의 제목',
-    dataIndex: 'title',
-    key: 'title',
-  },
-  {
-    title: '문의 내용',
-    key: 'context',
-    dataIndex: 'context',
-  },
-];
 
 const QuestionManage = () => {
-  const {
-    data: questions,
-    loading,
-    error,
-  } = useFetch<QuestionsResponse>('/questions', 'GET');
+  const { data: questions, loading } = useFetch<QuestionsResponse>(
+    '/questions',
+    'GET'
+  );
 
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -81,7 +40,7 @@ const QuestionManage = () => {
         rowKey={(item) => {
           return item.id;
         }}
-        columns={columns}
+        columns={questionsColumns}
         dataSource={questions?.content}
         loading={loading}
       />

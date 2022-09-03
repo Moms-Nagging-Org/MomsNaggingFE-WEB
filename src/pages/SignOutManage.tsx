@@ -1,9 +1,8 @@
 import CustomLayout from '@/components/Layout';
 import ManageUtil from '@/components/ManageUtil';
-
 import useFetch from '@/hooks/useFetch';
+import { SignOutColumns, SignOutResponse } from '@/interface';
 import { Table } from 'antd';
-import { ColumnsType } from 'antd/lib/table';
 import { useState } from 'react';
 import {
   createSearchParams,
@@ -11,42 +10,8 @@ import {
   useSearchParams,
 } from 'react-router-dom';
 
-interface SignOutResponse {
-  content: SignOut[];
-  totalPages: number;
-  totalElements: number;
-  size: number;
-  empty: boolean;
-}
-
-interface SignOut {
-  context: string;
-  id: number;
-  title: string;
-  createdAt: string;
-}
-
-const columns: ColumnsType<SignOut> = [
-  {
-    title: '탈퇴 일자',
-    dataIndex: 'createdAt',
-    key: 'createdAt',
-    render: (value) => <div>{value.slice(0, 10)}</div>,
-  },
-  {
-    title: '아이디',
-    dataIndex: 'id',
-    key: 'id',
-  },
-  {
-    title: '탈퇴 사유',
-    dataIndex: 'title',
-    key: 'title',
-  },
-];
-
 const SignOutManage = () => {
-  const { data: questions, loading } = useFetch<SignOutResponse>(
+  const { data: signOutData, loading } = useFetch<SignOutResponse>(
     '/sign-out',
     'GET'
   );
@@ -56,13 +21,13 @@ const SignOutManage = () => {
   const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
 
   return (
-    <CustomLayout data={questions} open="/sign-out" title="탈퇴관리">
+    <CustomLayout data={signOutData} open="/sign-out" title="탈퇴관리">
       <ManageUtil />
       <Table
         pagination={{
           current: page,
-          pageSize: questions?.totalElements,
-          total: questions?.totalPages,
+          pageSize: signOutData?.totalElements,
+          total: signOutData?.totalPages,
           onChange: (page) => {
             setPage(page);
             navigate({
@@ -75,8 +40,8 @@ const SignOutManage = () => {
         rowKey={(item) => {
           return item.id;
         }}
-        columns={columns}
-        dataSource={questions?.content}
+        columns={SignOutColumns}
+        dataSource={signOutData?.content}
         loading={loading}
       />
     </CustomLayout>
