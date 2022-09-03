@@ -4,13 +4,12 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import {
   DashBoard,
+  Develop,
   Login,
   QuestionManage,
   SignOutManage,
   UserManage,
 } from './pages';
-
-import PushManage from './pages/PushManage';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -103,8 +102,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/habit" element={<DashBoard />} />
-        <Route path="/push" element={<PushManage />} />
+        <Route path="/habit" element={<Develop />} />
+        <Route path="/push" element={<Develop />} />
         <Route path="/user" element={<UserManage />} />
         <Route path="/question" element={<QuestionManage />} />
         <Route path="/sign-out" element={<SignOutManage />} />

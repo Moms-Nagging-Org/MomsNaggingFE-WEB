@@ -5,3 +5,4 @@ export { default as PushManage } from './PushManage';
 export { default as HabitManage } from './HabitManage';
 export { default as QuestionManage } from './QuestionManage';
 export { default as SignOutManage } from './SignOutManage';
+export { default as Develop } from './Develop';
