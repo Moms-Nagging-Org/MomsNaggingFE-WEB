@@ -21,8 +21,8 @@
 <path d="M116.172 64.1367L114.419 66.7195" stroke="#5B351F" strokeWidth="1.15302" strokeMiterlimit="10" strokeLinecap="round"/>
 <path d="M107.951 61.5207C107.409 59.4798 108.4 57.4505 110.164 56.9778C111.929 56.505 113.808 57.7734 114.35 59.8027" stroke="#5B351F" strokeWidth="1.15302" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
-<filter id="filter0_d_23_8269" x="0" y="0.521484" width="155.413" height="145.648" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_d_23_8269" x="0" y="0.521484" width="155.413" height="145.648" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="10"/>

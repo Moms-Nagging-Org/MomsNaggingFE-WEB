@@ -260,7 +260,7 @@ const items: MenuItem[] = [
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1_1624)">
+      <g clipPath="url(#clip0_1_1624)">
         <path
           d="M2.5 21L3.29 18.13C4.6 13.4 8.05 11 11.5 11"
           stroke="white"
@@ -443,9 +443,9 @@ const SideBar = ({ open = '/dashboard' }: Props) => {
               width="155.413"
               height="145.648"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix
                 in="SourceAlpha"
                 type="matrix"
