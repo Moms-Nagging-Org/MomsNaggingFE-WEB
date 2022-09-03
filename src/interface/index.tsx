@@ -106,7 +106,7 @@ export interface Users {
   provider: string;
 }
 
-export const UserColumns: ColumnsType<Users> = [
+export const userColumns: ColumnsType<Users> = [
   {
     title: '가입 일자',
     dataIndex: 'createdAt',
