@@ -18,12 +18,7 @@ interface Services {
 const DashBoard = () => {
   const dashMenu = ['총 회원 수', '문의사항 개수', '엄친아'];
 
-  const { data: questions, loading } = useFetch<DashBoardResponse>(
-    '/dashboard',
-    'GET'
-  );
-
-  console.log(questions?.grade);
+  const { data: dashData } = useFetch<DashBoardResponse>('/dashboard', 'GET');
 
   return (
     <CustomLayout data={'1'} title="대시보드">
@@ -35,19 +30,19 @@ const DashBoard = () => {
           <Wrapper id={i !== 3 ? 'top' : ''}>
             {i === 2 ? (
               <>
-                {Object.keys(questions?.grade ?? {}).map((value, index) => (
+                {Object.keys(dashData?.grade ?? {}).map((value, index) => (
                   <Card key={value.toString()}>
                     <LevelTitle>{value}</LevelTitle>
-                    <CardTitle>{questions?.grade[value]}</CardTitle>
+                    <CardTitle>{dashData?.grade[value]}</CardTitle>
                   </Card>
                 ))}
               </>
             ) : (
               <Card key={v.toString()}>
                 {i === 0 ? (
-                  <CardTitle>{questions?.service.nofUsers} 명</CardTitle>
+                  <CardTitle>{dashData?.service.nofUsers} 명</CardTitle>
                 ) : (
-                  <CardTitle>{questions?.service.nofQuestions} 개</CardTitle>
+                  <CardTitle>{dashData?.service.nofQuestions} 개</CardTitle>
                 )}
               </Card>
             )}
