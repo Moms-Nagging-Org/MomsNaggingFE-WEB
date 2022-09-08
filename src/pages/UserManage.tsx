@@ -11,11 +11,14 @@ import {
 } from 'react-router-dom';
 
 const UserManage = () => {
-  const { data: userData, loading } = useFetch<UsersResponse>('/users', 'GET');
-
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
+  const { data: userData, loading } = useFetch<UsersResponse>(
+    `/users?page=${page - 1}`,
+    'GET'
+  );
+
+  const navigate = useNavigate();
 
   return (
     <CustomLayout data={userData} open="/user" title="회원관리">

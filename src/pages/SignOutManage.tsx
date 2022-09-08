@@ -11,14 +11,14 @@ import {
 } from 'react-router-dom';
 
 const SignOutManage = () => {
+  const [searchParams] = useSearchParams();
+  const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
   const { data: signOutData, loading } = useFetch<SignOutResponse>(
-    '/sign-out',
+    `/sign-out?page=${page - 1}`,
     'GET'
   );
 
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
 
   return (
     <CustomLayout data={signOutData} open="/sign-out" title="탈퇴관리">

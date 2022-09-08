@@ -11,14 +11,14 @@ import {
 } from 'react-router-dom';
 
 const QuestionManage = () => {
+  const [searchParams] = useSearchParams();
+  const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
   const { data: questions, loading } = useFetch<QuestionsResponse>(
-    '/questions',
+    `/questions?page=${page - 1}`,
     'GET'
   );
 
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const [page, setPage] = useState(parseInt(searchParams.get('page') ?? '1'));
 
   return (
     <CustomLayout data={questions} open="/question" title="문의사항">
