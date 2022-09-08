@@ -9,6 +9,7 @@ import {
   QuestionManage,
   SignOutManage,
   UserManage,
+  PushManage,
 } from './pages';
 
 const GlobalStyle = createGlobalStyle`
@@ -103,7 +104,7 @@ const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/habit" element={<Develop />} />
-        <Route path="/push" element={<Develop />} />
+        <Route path="/push" element={<PushManage />} />
         <Route path="/user" element={<UserManage />} />
         <Route path="/question" element={<QuestionManage />} />
         <Route path="/sign-out" element={<SignOutManage />} />

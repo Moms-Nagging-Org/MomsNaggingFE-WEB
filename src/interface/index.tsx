@@ -139,3 +139,56 @@ export const userColumns: ColumnsType<Users> = [
     dataIndex: 'naggingLevel',
   },
 ];
+
+export interface PushResponse {
+  content: PushList[];
+  totalPages: number;
+  totalElements: number;
+  total: number;
+}
+
+export interface PushList {
+  id: number;
+  pushDate: string;
+  pushTime: string;
+  pushType: string;
+  mon: boolean;
+  tue: boolean;
+  wed: boolean;
+  thu: boolean;
+  fri: boolean;
+  sat: boolean;
+  sun: boolean;
+  title: string;
+  level1: string;
+  level2: string;
+  level3: string;
+}
+
+export const PushColumns: ColumnsType<PushList> = [
+  {
+    title: '요일',
+    dataIndex: 'pushDate',
+    key: 'pushDate',
+  },
+  {
+    title: '시간',
+    dataIndex: 'pushTime',
+    key: 'pushTime',
+  },
+  {
+    title: '(1) 다정한 엄마',
+    dataIndex: 'level1',
+    key: 'level1',
+  },
+  {
+    title: '(2) 냉정한 엄마',
+    dataIndex: 'level2',
+    key: 'level2',
+  },
+  {
+    title: '(3) 화가 많은 엄마',
+    dataIndex: 'level3',
+    key: 'level3',
+  },
+];
