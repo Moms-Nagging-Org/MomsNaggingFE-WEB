@@ -192,3 +192,41 @@ export const PushColumns: ColumnsType<PushList> = [
     key: 'level3',
   },
 ];
+
+export interface HabitResponse {
+  content: HabitList[];
+  totalPages: number;
+  totalElements: number;
+  total: number;
+}
+
+export interface HabitList {
+  id: number;
+  scheduleName: string;
+  level1: string;
+  level2: string;
+  level3: string;
+}
+
+export const HabitColumns: ColumnsType<HabitList> = [
+  {
+    title: '추천 습관 이름',
+    dataIndex: 'scheduleName',
+    key: 'scheduleName',
+  },
+  {
+    title: '(1) 다정한 엄마',
+    dataIndex: 'level1',
+    key: 'level1',
+  },
+  {
+    title: '(2) 냉정한 엄마',
+    dataIndex: 'level2',
+    key: 'level2',
+  },
+  {
+    title: '(3) 화가 많은 엄마',
+    dataIndex: 'level3',
+    key: 'level3',
+  },
+];
