@@ -9,4 +9,15 @@ export default defineConfig({
       '@/': `${process.cwd()}/src/`,
     },
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          'primary-color': '#f43e51',
+          'heading-color': '#f43e51',
+        },
+        javascriptEnabled: true,
+      },
+    },
+  },
 });

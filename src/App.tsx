@@ -1,4 +1,4 @@
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
@@ -13,6 +13,7 @@ import {
 } from './pages';
 
 const GlobalStyle = createGlobalStyle`
+  @primary-color: #f43e51;
   ${reset}
   * {
     outline: none;
