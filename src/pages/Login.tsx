@@ -1,4 +1,3 @@
-import { Positioner } from '@/components/Wrapper/styled';
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -231,6 +230,14 @@ const Input = styled.input`
   &#top {
     margin-top: 2rem;
   }
+`;
+
+const Positioner = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Wrapper = styled.div`
