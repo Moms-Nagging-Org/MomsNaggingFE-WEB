@@ -1,3 +1,4 @@
+import styled, { createGlobalStyle } from 'styled-components';
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -208,8 +209,6 @@ const Login = () => {
 };
 
 export default Login;
-
-import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
