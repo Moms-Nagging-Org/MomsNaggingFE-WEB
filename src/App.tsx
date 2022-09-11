@@ -4,13 +4,12 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import {
   DashBoard,
-  Develop,
+  HabitManage,
   Login,
+  PushManage,
   QuestionManage,
   SignOutManage,
   UserManage,
-  PushManage,
-  HabitManage,
 } from './pages';
 
 const GlobalStyle = createGlobalStyle`
