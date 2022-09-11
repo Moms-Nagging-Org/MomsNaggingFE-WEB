@@ -27,7 +27,6 @@ const PushManage = () => {
 
   const onChange = (e: RadioChangeEvent) => {
     setPushType(e.target.value);
-    console.log(`radio checked:${e.target.value}`);
   };
 
   return (

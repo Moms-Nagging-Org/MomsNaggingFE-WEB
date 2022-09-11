@@ -15,8 +15,6 @@ const loadingLv = {
 const DashBoard = () => {
   const { data: dashData } = useFetch<DashBoardResponse>('/dashboard', 'GET');
 
-  console.log(dashData?.grade);
-
   return (
     <CustomLayout data={'1'} title="대시보드">
       {dashMenu.map((v, i) => (
